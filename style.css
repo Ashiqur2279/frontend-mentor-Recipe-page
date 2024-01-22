@@ -1,25 +1,186 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Outfit", "Young Serif", serif;
-}
-
-:root{
-    /* primary  */
-    --nutmeg: hsl(14, 45%, 36%);
-    --DarkRaspberry : hsl(332, 51%, 32%)
-
-    /* neutral */
-    --White : hsl(0, 0%, 100%);
-    --RoseWhite : hsl(330, 100%, 98%);
-    --Eggshell : hsl(30, 54%, 90%);
-    --LightGrey : hsl(30, 18%, 87%);
-    --WengeBrown : hsl(30, 10%, 34%);
-    --DarkCharcoal : hsl(24, 5%, 18%);
-}
-
-p
+/* reset style */
+*
 {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* global style */
+body
+{
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(0, 0%, 100%);
     font-size: 16px;
+    color: hsl(30, 10%, 34%);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* typography */
+h1, h2
+{
+    font-family: "Young Serif", serif;
+}
+h3
+{
+    font-family: 'Outfit', sans-serif;
+}
+
+/* hero section style */
+.hero_section
+{
+    margin: 1.5rem;
+}
+
+.hero_section img 
+{
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.hero_section h1 
+{
+    margin: 1rem 0;
+   color: black;
+}
+
+/* preparation section style */
+.preparation_container 
+{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 15px;
+}
+
+.preparation_container h3
+{
+    color: hsl(332, 51%, 32%);
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+.preparation_container ul
+{
+    padding: 0 1rem;
+    line-height: 1.8rem;
+}
+
+.preparation_container ul li::marker
+{
+    color: hsl(332, 51%, 32%);
+}
+.sub_header
+{
+    font-weight: 600;
+    color: hsl(24, 5%, 18%);
+}
+
+/* ingredients style */
+.ingredients_container
+{
+    margin: 1.5rem;
+}
+
+.ingredients_container h2
+{
+    color: hsl(14, 45%, 36%);
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.ingredients_container ul
+{
+    padding: 0 1.2rem;
+    list-style-type: square;
+    line-height: 1.8rem;
+}
+
+.ingredients_container ul li::marker
+{
+    color: hsl(14, 45%, 36%);
+}
+
+
+
+/* instructions style */
+.instructions_container
+{
+    margin: 1.5rem;
+}
+.instructions_container h2
+{
+    color: hsl(14, 45%, 36%);
+    font-weight: 400;
+    margin: 1rem 0;
+}
+.instructions_container ol{
+    padding: 0 1.2rem;
+    line-height: 1.8rem;
+}
+
+.instructions_container ol li::marker
+{
+    color:hsl(14, 45%, 36%);
+}
+
+/* nutrition style */
+.nutrition_container
+{
+    margin: 1.5rem;
+}
+.nutrition_container h2
+{
+    color: hsl(14, 45%, 36%);
+    font-weight: 400;
+    margin: 1rem 0;
+}
+.nutrition_table
+{
+    width: 100%;
+    padding: 0 1rem;
+    border-collapse: collapse;
+}
+.nutrition_table tr:not(:last-child)
+{
+    border-bottom: 2px solid lightgray ;
+}
+.nutrition_table tr td
+{
+    width: 50%;
+    padding: 0.5rem 0;
+}
+.table_value
+{
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+}
+
+
+/* ----------------for all underline--------------- */
+.underline
+{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: lightgray;
+    margin: 0 1.5rem;
+}
+
+/* media screen style */
+@media screen and (max-width: 375px) {
+    .hero_section
+    {
+        margin: 0rem;
+    }
+    .hero_section img
+    {
+        border-radius: 0;
+    }
+    .hero_section *:not(img) 
+    {
+        margin: 1.5rem;
+    }
 }
